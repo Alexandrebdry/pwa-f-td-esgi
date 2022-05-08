@@ -1,0 +1,35 @@
+.product {
+  position: relative;
+  display: block;
+}
+
+.product header {
+  position: relative;
+  min-height: 40vh;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.64);
+}
+
+.product img {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+  height: auto;
+  max-height: 40vh;
+}
+
+.product header .placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.product main,
+.product main p {
+  margin-top: 1rem;
+}

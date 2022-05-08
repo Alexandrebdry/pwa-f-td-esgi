@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nozama Store 🛍</title>
+</head>
+<style>
+  :root {
+    --app-bg-color: royalblue;
+  }
+  *,*::before, *::after {
+    margin: 0;
+    padding: 0;
+  }
+  html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #fefefe;
+    font-family: sans-serif;
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+  #app > header a {
+    text-decoration: none;
+    color: inherit;
+  }
+  #app > header {
+    text-align: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--app-bg-color);
+    display: flex;
+    
+    align-items: center;
+    height: 56px;
+    color: #ffffff;
+    z-index: 10;
+  }
+  #app > header > div {
+    flex:1;
+  }
+  #app > header > a {
+    margin-right: 35px;
+  }
+  #app > main {
+    padding: 0 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  /* App shell */
+  /* Skeleton */
+  [hidden] { display: none !important; }
+  /* Skeleton */
+  .skeleton {
+    position: relative;
+    overflow: hidden;
+  }
+  .skeleton .hero {
+    min-height: 30vh;
+    background: var(--app-grey-color, #cccccc);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  .skeleton .title {
+    min-height: 20px;
+    background: var(--app-grey-color, #cccccc);
+    margin-bottom: 1rem;
+  }
+  .skeleton .text {
+    min-height: 20px;
+    max-width: 60%;
+    background: var(--app-grey-color, #cccccc);
+    margin-bottom: 1rem;
+  }
+
+  .skeleton::after {
+    display: block;
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
+    animation: loading 1.5s infinite;
+  }
+  @keyframes loading {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  /* View display */
+  [page] {
+    display: none;
+  }
+  [page][active] {
+    display: block;
+  }
+
+</style>
+<link href="./src/components/product.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./src/components/product.css"></noscript>
+<link href="./src/assets/css/product.css" rel="preload" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="./src/assets/css/product.css"></noscript>
+<body>
+  <section id="app">
+    <header>
+      <div>
+        <h1><a href="/">Nozama shop 🛍</a></h1>
+      </div>  
+      <a href="/cart">Le panier</a>
+    </header>
+    <main>
+
+      <app-home page></app-home>
+      <app-product page></app-product>
+      <app-cart page></app-cart>
+
+      <div class="skeleton">
+        <div class="hero"></div>
+        <div class="title"></div>
+        <div class="text"></div>
+      </div>
+    </main>
+  </section>
+  <script src="./src/main.js" type="module"></script>
+</body>
+</html>

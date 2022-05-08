@@ -1,0 +1,24 @@
+{
+  "name": "iw1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx vite dev --port 8080",
+    "database": "npx json-server ./data/db.json --port 3000",
+    "shapper": "npx shapper-proxy serve --port 9000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^2.9.1"
+  },
+  "dependencies": {
+    "idb": "^7.0.1",
+    "lit": "^2.2.3",
+    "network-latency": "^1.0.1",
+    "page": "^1.11.6",
+    "redaxios": "^0.4.1"
+  }
+}

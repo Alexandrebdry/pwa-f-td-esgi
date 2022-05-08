@@ -1,0 +1,31 @@
+*,*::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #fefefe;
+  font-family: sans-serif;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+}
+#app > header {
+  text-align: center;
+  position: sticky;
+  top: 0;
+  background-color: royalblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  color: #ffffff;
+  z-index: 10;
+}
+#app > main {
+  padding: 0 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
